@@ -4,7 +4,7 @@
 
 	$pass=md5($pass."zff;548sf");
 
-	$mysql=new mysqli("127.0.0.1','root','root','register");
+	$mysql=new mysqli("127.0.0.1','root','root','messenger");
 	
 	$result=$mysql->query("SELECT * FROM `users` WHERE `login`= '$login' AND `pass`='$pass'");
 
