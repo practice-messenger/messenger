@@ -1,0 +1,23 @@
+body{
+	background-color: gainsboro ;
+
+}
+.container{
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+h2{
+	text-align: center;
+}
+.col {
+	margin-left: 25px;
+}
+input {
+	width: 450px;
+
+}
+
