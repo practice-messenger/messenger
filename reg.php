@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include 'connect.php';
 $first_name=filter_var(trim($_POST['first_name']),FILTER_SANITIZE_STRING);
 $last_name=filter_var(trim($_POST['last_name']),FILTER_SANITIZE_STRING);
 $phone_number=filter_var(trim($_POST['phone_number']),FILTER_SANITIZE_STRING);
@@ -32,8 +32,6 @@ if ($password!=$password2){array_push($errors,"Password do not match")}
 
 $password=md5($password."zff;548sf");
 
-
-$connect = mysqli_connect('127.0.0.1','root','', 'messenger');
 
 if (!$connect) {
     echo "Failed to connect to MySQL: ";
