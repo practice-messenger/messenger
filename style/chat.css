@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+	background-color: gainsboro ;
 	overflow: hidden;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -24,7 +25,8 @@ input{
 	flex: 2;
 }
 .msg{
-	background-color: #dcf8c6;
+	background-color: cadetblue;
+	color: antiquewhite;
 	padding: 5px 10px;
 	border-radius: 5px;
 	margin-bottom: 8px;
@@ -35,7 +37,7 @@ input{
 	font-weight: bold;
 }
 .msg span{
-	font-size: 0.8 rem;
+	font-size: 0.8rem;
 	margin-left:15px ;
 
 }

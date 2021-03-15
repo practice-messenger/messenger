@@ -2,21 +2,21 @@
 	$login=filter_var(trim($_POST['login']),FILTER_SANITIZE_STRING);
 	$pass=filter_var(trim($_POST['pass']),FILTER_SANITIZE_STRING);
 
-	$pass=md5($pass."zff;548sf");
+$password=md5($pass."zff;548sf");
 
-	$mysql=new mysqli("127.0.0.1','root','root','messenger");
-	
-	$result=$mysql->query("SELECT * FROM `users` WHERE `login`= '$login' AND `pass`='$pass'");
+	//$mysql=new mysqli("127.0.0.1','root','','messenger");
+$connect = mysqli_connect('127.0.0.1','root','', 'messenger');
+
+	$result=$connect->query("SELECT * FROM `user` WHERE `password`='$password' AND `mail`= '$login' OR `phone_number`= '$login' ");
 
 	$user=$result->fetch_assoc();
-	if (count($user)==0) {
+	if ($user==0) {
 		echo "Користувача не найдено";
 		exit();
 	}
 
-	setcookie('user', $user['name'], time()+3600, "/");
+	setcookie('user', $user['mail'], time()+3600, "/");
 
-	$mysql->close();
+	$connect->close();
 
-	header("Loccation: /")
- ?>
+	header('Location: chat.php');

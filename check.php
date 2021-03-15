@@ -11,7 +11,7 @@
 		echo "Недоступна довжина імені";
 		exit();
 	}
-	if(mb_strlen($pass)<6 || mb_strlen($login)>15){
+	if(mb_strlen($pass)<6 || mb_strlen($pass)>15){
 		echo "Недоступна довжина паролю (від 6 до 15 символів)";
 		exit();
 	}
@@ -27,10 +27,9 @@ if (!$connect) {
   echo "Failed to connect to MySQL: ";
   exit();
 }
-$query = "INSERT INTO `users` (`login`, `pass`, `name`) VALUES ('$login', '$pass', '$name')";
+$query = "INSERT INTO `user` (`login`, `pass`, `name`) VALUES ('$login', '$pass', '$name')";
 mysqli_query($connect, $query);
 
 	$connect->close();
 
-	header("Loccation: /")
- ?>
+	header("Location: /");
