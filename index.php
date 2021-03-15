@@ -4,7 +4,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Global</title>
+    <title>Messenger</title>
     <link rel="stylesheet" href="style/global.css">
 </head>
 <body>
